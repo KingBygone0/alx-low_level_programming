@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <unistd.h>
 /**
  * main - Entry point
  * Description: Print all possible combinations of two two-digit numbers
@@ -27,7 +26,7 @@ int main(void)
 						putchar(' ');
 					}
 				}
-			}
+		}
 	}
 	putchar('\n');
 	return (0);
