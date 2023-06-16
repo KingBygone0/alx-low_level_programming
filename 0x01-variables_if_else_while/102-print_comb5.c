@@ -27,7 +27,7 @@ int main(void)
 			}
 			m++;
 		}
-		l++
+		l++;
 	}
 	return (0);
 }
