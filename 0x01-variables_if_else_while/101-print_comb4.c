@@ -18,13 +18,13 @@ int main(void)
 			{
 				if (x < y && y < z)
 				{
-					purchar(x % 10 + '0');
-					purchar(y % 10 + '0');
-					purchar(z % 10 + '0');
+					putchar(x % 10 + '0');
+					putchar(y % 10 + '0');
+					putchar(z % 10 + '0');
 					if (y + x + z != 0 && x < 7)
 					{
 						putchar(',');
-						purchar(' ');
+						putchar(' ');
 					}
 				}
 			}
