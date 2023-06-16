@@ -13,7 +13,7 @@ int main(void)
 	{
 		putchar(lowerCase);
 	}
-	for (lowerCase = 'a'; lowerCase <0 'f'; lowerCase++)
+	for (lowerCase = 'a'; lowerCase <= 'f'; lowerCase++)
 	{
 		putchar(lowerCase);
 	}
