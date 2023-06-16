@@ -9,7 +9,7 @@ int main(void)
 {
 	char letter;
 
-	for (letter = 'a'; letter <= 'z' letter++)
+	for (letter = 'a'; letter <= 'z'; letter++)
 	{
 	if (letter != 'q' && letter != 'e')
 	{
@@ -17,5 +17,5 @@ int main(void)
 	}
 	}
 	putchar('\n');
-
+	return (0);
 }
