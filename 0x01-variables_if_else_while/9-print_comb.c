@@ -7,18 +7,16 @@
  */
 int main(void)
 {
-	int g = 0, h = 0;
+	int q;
 
-	while (g < 10){
+	for (q = 0; q < 10; q++)
 	{
-		putchar(g + 'o');
-		putchar(',');
-		putchar(' ');
-		putchar(h + '0');
-		h++;
+	if (q != 0)
+	{
+	putchar(',');
+	putchar(' ');
 	}
-	h = 0;
-	g++;
+	putchar(q % 10 + '0');
 	}
 	putchar('\n');
 	return (0);
