@@ -20,4 +20,5 @@ int main(void)
 			sum += z;
 	}
 	printf("%lu\n", sum);
-	return 0;
+	return (0);
+}
