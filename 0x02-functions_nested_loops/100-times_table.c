@@ -9,42 +9,87 @@
  */
 void print_times_table(int n)
 {
-	int y, x, prod;
+	int j, i, resul;
 
 	if (n <= 15 && n >= 0)
 	{
-		for (y = 0; y <= n; y++)
+		for (i = 0; i <= n; i++)
 		{
-			for (x = 0; x <= n; x++)
+			for (j = 0; j <= n; j++)
 			{
-				prod = (y * x);
-				if (x != 0)
+				resul = j * i;
+				if (j == 0)
+					_putchar(resul + 48);
+				if (j > 0)
 				{
 					_putchar(',');
-					_putchar(' ');
+					if (resul < 10)
+					{
+						print_spaces(3);
+						_putchar(resul + 48);
+					}
+					if (resul < 100 && resul >= 10)
+						divide_10(resul);
+					if (resul < 1000 && resul >= 100)
+						divide_100(resul);
+					if (resul < 10000 && resul >= 1000)
+						divide_1000(resul);
 				}
-				if (prod < 10 && x != 0)
-				{
-					_putchar(' ');
-					_putchar(' ');
-					_putchar((prod % 10) + '0');
-				}
-				else if (prod >= 10 && prod < 100)
-				{
-					_putchar(' ');
-					_putchar((prod / 10) + '0');
-					_putchar((prod % 10) + '0');
-				}
-				else if (prod >= 100 && x != 0)
-				{
-					_putchar((prod / 100) + '0');
-					_putchar((prod / 10) % 10 + '0');
-					_putchar((prod % 10) + '0');
-				}
-				else
-					_putchar((prod % 10) + '0');
 			}
 			_putchar('\n');
 		}
 	}
 }
+
+/**
+ * print_spaces - print spaces
+ * @amount: amount spaces
+ * Return: nothing
+ **/
+void print_spaces(int amount)
+{
+	int i;
+
+	for (i = 0; i < amount; i++)
+		_putchar(' ');
+}
+
+/**
+ * divide_1000 - print 4 digits numbers
+ * @resul: number
+ * Return: nothing
+ **/
+void divide_1000(int resul)
+{
+	_putchar((resul / 1000) + 48);
+	_putchar(((resul % 1000) / 100) + 48);
+	_putchar((((resul % 1000) % 100) / 10) + 48);
+	_putchar((((resul % 1000) % 100) % 10) + 48);
+
+}
+
+/**
+ * divide_100 - print 3 digits numbers
+ * @resul: number
+ * Return: nothing
+ **/
+void divide_100(int resul)
+{
+	print_spaces(1);
+	_putchar((resul / 100) + 48);
+	_putchar(((resul % 100) / 10) + 48);
+	_putchar(((resul % 100) % 10) + 48);
+}
+
+/**
+ * divide_10 - print 2 digits numbers
+ * @resul: number
+ * Return: nothing
+ **/
+void divide_10(int resul)
+{
+	print_spaces(2);
+	_putchar((resul / 10) + 48);
+	_putchar((resul % 10) + 48);
+}
+.
