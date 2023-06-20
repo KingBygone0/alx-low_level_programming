@@ -4,7 +4,7 @@
  * main - prints sum of even fibonnaci
  * suits elements
  * fibonacci suit members
- * Return: return 10
+ * Return: return 0
  */
 int main(void)
 {
