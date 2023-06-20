@@ -92,4 +92,3 @@ void divide_10(int resul)
 	_putchar((resul / 10) + 48);
 	_putchar((resul % 10) + 48);
 }
-.
