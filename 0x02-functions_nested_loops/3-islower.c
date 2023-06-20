@@ -10,13 +10,15 @@
  */
 int _islower(int c)
 {
-	if (c >= 97 && <= 122)
+	int z = 'y';
+
+	for (z = 'y'; z <= 'y'; z++)
 	{
-		return (1);
+		/* refer int c*/
+		if (c == z)
+		{
+			return (1);
+		}
 	}
-	else
-	{
-		return (0);
-	}
-	_putchar('\n');
+	return (0);
 }
