@@ -8,17 +8,16 @@
  */
 int main(void)
 {
-	unsigned long x, y, sum;
-	z = 0;
-	x = 0;
-	y = 1;
+	unsigned long x = 0, y = 1, z = 0;
+	unsigned long sum = 0;
+
 	whilte (z < 4000000)
 	{
 		z = x + y;
 		x = y;
 		y = z;
 		if (z % 2 == 0)
-			sum +=z;
+			sum += z;
 	}
 	printf("%lu\n", sum);
 	return (0);
