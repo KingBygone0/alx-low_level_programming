@@ -9,36 +9,40 @@
  */
 void print_times_table(int n)
 {
-	int a, b, op;
+	int y, x, prod;
 
-	if (n >= 0 && n <= 15)
+	if (n <= 15 && n >= 0)
 	{
-		for (a = 0; a <= n; a++)
+		for (y = 0; y <= n; y++)
 		{
-			_putchar(48);
-			for (b = 1; b <= n; b++)
+			for (x = 0; x <= n; x++)
 			{
-				op = a * b;
-				_putchar(44);
-				_putchar(32);
-				if (op <= 9)
+				prod = (y * x);
+				if (x != 0)
 				{
-					_putchar(32);
-					_putchar(32);
-					_putchar(op + 48);
+					_putchar(',');
+					_putchar(' ');
 				}
-				else if (op <= 99)
+				if (prod < 10 && x != 0)
 				{
-					_putchar(32);
-					_putchar((op / 10) + 48);
-					_putchar((op % 10) + 48);
+					_putchar(' ');
+					_putchar(' ');
+					_putchar((prod % 10) + '0');
+				}
+				else if (prod >= 10 && prod < 100)
+				{
+					_putchar(' ');
+					_putchar((prod / 10) + '0');
+					_putchar((prod % 10) + '0');
+				}
+				else if (prod >= 100 && x != 0)
+				{
+					_putchar((prod / 100) + '0');
+					_putchar((prod / 10) % 10 + '0');
+					_putchar((prod % 10) + '0');
 				}
 				else
-				{
-					_putchar(((op / 100) % 10) + 48);
-					_putchar(((op / 10) % 10) + 48);
-					_putchar((op % 10) + 48);
-				}
+					_putchar((prod % 10) + '0');
 			}
 			_putchar('\n');
 		}
