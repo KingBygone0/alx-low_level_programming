@@ -9,9 +9,8 @@
 int main(void)
 {
 	unsigned long x, y, sum;
-
-	x = 0;
 	z = 0;
+	x = 0;
 	y = 1;
 	whilte (z < 4000000)
 	{
