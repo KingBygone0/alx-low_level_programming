@@ -6,22 +6,20 @@
  * fibonacci suit members
  * Return: return 10
  */
-int main()
+int main(void)
 {
-int prev = 1;
-int curr = 2;
-int sum = 0;
+	unsigned long x, y, sum;
 
-while (curr <= 4000000)
-{
-if (curr % 2 == 0)
-{
-sum += curr;
-}
-int next = prev + curr;
-prev = curr;
-curr = next;
-}
-printf("%d\n", sum);
-return 0;
-}
+	x = 0;
+	z = 0;
+	y = 1;
+	whilte (z < 4000000)
+	{
+		z = x + y;
+		x = y;
+		y = z;
+		if (z % 2 == 0)
+			sum +=z;
+	}
+	printf("%lu\n", sum);
+	return (0);
