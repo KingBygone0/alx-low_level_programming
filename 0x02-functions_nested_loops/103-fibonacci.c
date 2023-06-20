@@ -11,7 +11,7 @@ int main(void)
 	unsigned long x = 0, y = 1, z = 0;
 	unsigned long sum = 0;
 
-	whilte (z < 4000000)
+	while (z < 4000000)
 	{
 		z = x + y;
 		x = y;
