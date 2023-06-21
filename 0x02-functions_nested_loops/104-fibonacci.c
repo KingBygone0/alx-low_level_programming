@@ -9,9 +9,10 @@ int main(void)
 {
 	long int n1, n2, fn, afn;
 
+	afn = 0;
 	n1 = 1;
 	n2 = 2;
-	fn = afn = 0;
+	fn = 0;
 	while (n1 <= 4000000)
 	{
 		if ((n1 % 2) == 0)
