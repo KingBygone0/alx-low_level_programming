@@ -7,22 +7,26 @@
  */
 int main(void)
 {
-	long int n1, n2, fn, afn;
+	int counter = 0;
+	unsigned long first = 0;
+	unsigned long second = 1;
+	unsigned long fib;
 
-	afn = 0;
-	n1 = 1;
-	n2 = 2;
-	fn = 0;
-	while (n1 <= 4000000)
+	while (counter <= 97)
 	{
-		if ((n1 % 2) == 0)
+		fib = first + second;
+		if (counter < 97)
 		{
-			afn += n1;
+			printf("%lu, ", fib);
 		}
-		fn = n1 + n2;
-		n1 = n2;
-		n2 = fn;
+		else
+		{
+			printf("%lu", fib);
+		}
+		first = second;
+		second = fib;
+		counter++;
 	}
-	printf("%ld\n", afn);
+	printf("\n");
 	return (0);
 }
