@@ -1,15 +1,24 @@
+#include<stdio.h>
+#include<string.h>
 #include "main.h"
 
 /**
-   * main - check the code for Holberton School students.
-    *
-     * Return: Always 0.
-      */
-int main(void)
+ * _puts - prints
+ * @str: The character to print
+ * Return: On success 1.
+ * On error, -1 is returned, and errno is set appropriately.
+ **/
+void _puts(char *str)
 {
-	    char *str;
+	char *strputs;
+	int i;
 
-	        str = "I do not fear computers. I fear the lack of them - Isaac Asimov";
-		    _puts(str);
-		        return (0);
+	strputs = str;
+	i = 0;
+	while (strputs[i] != '\0')
+	{
+		_putchar(strputs[i]);
+		++i;
+	}
+	_putchar('\n');
 }
