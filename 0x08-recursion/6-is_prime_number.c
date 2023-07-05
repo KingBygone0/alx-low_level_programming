@@ -1,6 +1,6 @@
 /**
  * File: 6-is_prime_number.c
-Auth: Isaac Annor
+ * Auth: Isaac Annor
 */
 #include "main.h"
 
