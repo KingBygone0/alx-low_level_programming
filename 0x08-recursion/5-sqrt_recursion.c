@@ -7,8 +7,10 @@
 /**
  * _proceso - Return the square root of a number with iterators
  * @i: root to check of the number
- * @n: number
- * Return: -1 or root of n
+ * @n: The number to find the square root of
+ *
+ * Return: If i * i == n, return i. If i * i > n, returns -1.
+ * Otherwise, returns the result of _proceso(i + 1, n).
  */
 int _proceso(int i, int n)
 {
