@@ -14,13 +14,19 @@
  */
 int factorial(int n)
 {
-if (n < 0)
+int resul;
+
+if (n > 0)
 {
-return (-1);
+resul = n * factorial(n - 1);
+return (resul);
 }
 if (n == 0)
 {
-return 1;
+return (1);
 }
-return (n * factorial(n - 1));
+else
+{
+return (-1);
+}
 }
