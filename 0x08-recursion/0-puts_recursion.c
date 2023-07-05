@@ -1,4 +1,4 @@
-/**
+/*
  * file:0-puts_recursion.c
  * Auth: Isaac
  */
@@ -6,9 +6,8 @@
 #include "main.h"
 
 /**
- * Description: _puts_recursion - prints a string, followed by a new line.
- * @s: The string to be printed
- * Return: no return.
+ * _puts_recursion - Prints a string, followed by a new line.
+ * @s: The string to be printed.
  */
 void _puts_recursion(char *s)
 {
