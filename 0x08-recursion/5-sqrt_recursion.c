@@ -1,3 +1,7 @@
+/*
+ * File:5-sqrt_recursion.c
+ * Auth:Isaac Annor
+ */
 int _getsq(int, int);
 /**
  * _sqrt_recursion - root square
