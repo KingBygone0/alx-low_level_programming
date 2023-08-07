@@ -1,5 +1,5 @@
 #include "main.h"
-#include "main.h"
+#include <stdio.h>
 /**
  * main - copy a file into another file
  * @argc: amount of arguments
