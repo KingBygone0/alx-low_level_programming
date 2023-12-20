@@ -1,31 +1,22 @@
-
-dule that calculates the perimeter of an island in a grid."""
-
-
-def num_water_neighbors(grid, i, j):
-        """Returns the number of water neighbors a cell has in a grid."""
-
-            num = 0
-
-                if i <= 0 or not grid[i - 1][j]:
-                        num += 1
-                            if j <= 0 or not grid[i][j - 1]:
-                                    num += 1
-                                        if j >= len(grid[i]) - 1 or not grid[i][j + 1]:
-                                                num += 1
-                                                    if i >= len(grid) - 1 or not grid[i + 1][j]:
-                                                            num += 1
-
-                                                                return num
+#!/usr/bin/python3
+"""5-island_perimeter module"""
 
 
-                                                                def island_perimeter(grid):
-                                                                    """Returns the perimeter of the island in grid."""
+def island_perimeter(grid):
+    """Returns the perimeter of the island described in grid"""
+    c = 0
+    length = len(grid) - 1
+    width = len(grid[0]) - 1
 
-                                                                        perimeter = 0
-                                                                            for i in range(len(grid)):
-                                                                                    for j in range(len(grid[i])):
-                                                                                                if grid[i][j]:
-                                                                                                                perimeter += num_water_neighbors(grid, i, j)
-
-                                                                                                                    return perimeter
+    for i, r in enumerate(grid):
+        for j, n in enumerate(r):
+            if n == 1:
+                if i == 0 or grid[i - 1][j] != 1:
+                    c += 1
+                if j == 0 or grid[i][j - 1] != 1:
+                    c += 1
+                if j == width or grid[i][j + 1] != 1:
+                    c += 1
+                if i == length or grid[i + 1][j] != 1:
+                    c += 1
+    return c
